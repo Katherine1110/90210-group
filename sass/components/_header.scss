@@ -1,0 +1,141 @@
+body {
+  // font-family:
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: $main-text-color;
+}
+
+.header__wrapper {
+  padding: 40px 50px;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) -11.7%, rgba(0, 0, 0, 0) 100%);
+  z-index: 999;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.menu__list {
+  display: flex;
+  padding-left: 0px;
+  gap: 30px;
+  list-style: none;
+
+  & .menu__item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  & .menu__link {
+    text-decoration: none;
+    color: $header-text-color;
+
+    @media screen and (max-width: $desktop) {
+      color: $main-text-color;
+    }
+  }
+
+  @media screen and (max-width: $desktop) {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 20px;
+    background-color: $header-text-color;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    margin-top: 0px;
+    padding: 50px 20px 120px 20px;
+  }
+}
+
+.menu__wrapper {
+  width: 100%;
+}
+
+.header__logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 30px;
+}
+
+.header__contacts {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.menu__item.dropdown {
+  position: relative;
+  color: $header-text-color;
+
+  &::after {
+    content: url(../../images/menu_arrow-down.svg);
+    width: auto;
+    height: auto;
+  }
+}
+
+.dropdown__list {
+  list-style: none;
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  padding-top: 30px;
+  background: $main-text-color;
+  display: none;
+  padding-left: 0px;
+  min-width: max-content;
+  gap: 15px;
+
+  & .dropdown__link {
+    color: $header-text-color;
+    text-decoration: none;
+  }
+}
+
+.menu__item.dropdown:hover {
+  text-decoration: underline;
+
+  & .dropdown__list {
+    display: flex;
+    flex-direction: column;
+    transition: 300ms;
+  }
+
+  & .dropdown__item:hover {
+    text-decoration: underline;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+
+  & .header__contacts--phone {
+    color: $header-text-color;
+    text-decoration: none;
+  }
+
+  & .header__contacts--button {
+    color: $header-text-color;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid $header-text-color;
+    padding: 15px 30px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
