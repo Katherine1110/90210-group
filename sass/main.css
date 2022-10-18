@@ -1,3 +1,18 @@
+@font-face {
+  font-family: WhitneySmm;
+  src: url("../../images/Whitney_Smm.ttf");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
+}
+
+@font-face {
+  font-family: Freight;
+  src: url("../../images/FreightTextProLight-Italic.ttf");
+}
+
 /*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -256,11 +271,16 @@ summary {
 }
 
 body {
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: 300;
   line-height: 1;
   letter-spacing: 0.04em;
   color: #000000;
+}
+
+section {
+  margin-bottom: 200px;
 }
 
 .header__wrapper {
@@ -292,6 +312,8 @@ body {
   padding-left: 0px;
   gap: 30px;
   list-style: none;
+  font-family: WhitneySmm;
+  margin: 0;
 }
 
 .menu__list .menu__item:hover {
@@ -302,31 +324,6 @@ body {
 .menu__list .menu__link {
   text-decoration: none;
   color: #ffffff;
-}
-
-@media screen and (max-width: 1200px) {
-  .menu__list .menu__link {
-    color: #000000;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .menu__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    gap: 20px;
-    background-color: #ffffff;
-    width: 100%;
-    max-width: 300px;
-    height: 100vh;
-    margin-top: 0px;
-    padding: 50px 20px 120px 20px;
-  }
 }
 
 .menu__wrapper {
@@ -351,35 +348,47 @@ body {
   gap: 30px;
 }
 
-.menu__item.dropdown {
+.menu__item.dropdown span {
   position: relative;
   color: #ffffff;
 }
 
-.menu__item.dropdown::after {
+.menu__item.dropdown span::after {
   content: url(../../images/menu_arrow-down.svg);
   width: auto;
   height: auto;
+  padding-left: 5px;
 }
 
-.dropdown__list {
+.dropdown__wrapper {
+  position: relative;
+  padding: 10px;
+}
+
+.dropdown__wrapper .dropdown__list {
   list-style: none;
   position: absolute;
-  left: 0px;
-  top: 16px;
-  padding-top: 30px;
-  background: #000000;
+  left: -10px;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   display: none;
   padding-left: 0px;
+  padding: 20px 10px;
+  padding: auto;
+  width: 145px;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
   gap: 15px;
 }
 
-.dropdown__list .dropdown__link {
+.dropdown__wrapper .dropdown__list .dropdown__link {
   color: #ffffff;
   text-decoration: none;
+  text-transform: capitalize;
+  font-family: Montserrat;
 }
 
 .menu__item.dropdown:hover {
@@ -399,7 +408,7 @@ body {
 }
 
 .menu__item.dropdown:hover .dropdown__item:hover {
-  text-decoration: underline;
+  font-weight: 500;
 }
 
 .header__contacts {
@@ -409,6 +418,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: WhitneySmm;
 }
 
 .header__contacts .header__contacts--phone {
@@ -456,16 +466,19 @@ body {
   color: #ffffff;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  font-family: Montserrat;
 }
 
 .hero__content p {
   font-size: 30px;
   line-height: 37px;
+  font-family: Montserrat;
 }
 
 .hero__content h1 {
   font-size: 48px;
   line-height: 58px;
+  font-family: Montserrat;
 }
 
 .hero__content span {
@@ -475,8 +488,8 @@ body {
 }
 
 .hero__content--arrow {
-  -webkit-animation: up_down 1s infinite alternate ease-in-out;
-          animation: up_down 1s infinite alternate ease-in-out;
+  -webkit-animation: up_down 2s infinite alternate ease-in-out;
+          animation: up_down 2s infinite alternate ease-in-out;
   position: absolute;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -484,5 +497,90 @@ body {
   bottom: 40px;
   font-size: 40px;
   z-index: 1;
+}
+
+@-webkit-keyframes up_down {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 30px;
+  }
+}
+
+@keyframes up_down {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 30px;
+  }
+}
+
+section {
+  padding-left: 240px;
+  padding-right: 240px;
+}
+
+.swiper {
+  width: 400px;
+  height: 500px;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swiper-slide--content {
+  position: relative;
+  right: 0px;
+}
+
+.swiper-slide--content p {
+  color: #000000;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-image: url("../../images/Villa_1 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-image: url("../../images/swiper_car.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-image: url("../../images/marcheeta.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.swiper-pagination {
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */

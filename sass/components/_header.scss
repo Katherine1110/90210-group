@@ -1,10 +1,14 @@
 body {
-  // font-family:
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: 300;
   line-height: 1;
   letter-spacing: 0.04em;
   color: $main-text-color;
+}
+
+section {
+  margin-bottom: 200px;
 }
 
 .header__wrapper {
@@ -27,6 +31,8 @@ body {
   padding-left: 0px;
   gap: 30px;
   list-style: none;
+  font-family: WhitneySmm;
+  margin: 0;
 
   & .menu__item:hover {
     text-decoration: underline;
@@ -36,24 +42,6 @@ body {
   & .menu__link {
     text-decoration: none;
     color: $header-text-color;
-
-    @media screen and (max-width: $desktop) {
-      color: $main-text-color;
-    }
-  }
-
-  @media screen and (max-width: $desktop) {
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    gap: 20px;
-    background-color: $header-text-color;
-    width: 100%;
-    max-width: 300px;
-    height: 100vh;
-    margin-top: 0px;
-    padding: 50px 20px 120px 20px;
   }
 }
 
@@ -75,7 +63,7 @@ body {
   gap: 30px;
 }
 
-.menu__item.dropdown {
+.menu__item.dropdown span {
   position: relative;
   color: $header-text-color;
 
@@ -83,24 +71,35 @@ body {
     content: url(../../images/menu_arrow-down.svg);
     width: auto;
     height: auto;
+    padding-left: 5px;
   }
 }
 
-.dropdown__list {
-  list-style: none;
-  position: absolute;
-  left: 0px;
-  top: 16px;
-  padding-top: 30px;
-  background: $main-text-color;
-  display: none;
-  padding-left: 0px;
-  min-width: max-content;
-  gap: 15px;
+.dropdown__wrapper {
+  position: relative;
+  padding: 10px;
 
-  & .dropdown__link {
-    color: $header-text-color;
-    text-decoration: none;
+  & .dropdown__list {
+    list-style: none;
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    display: none;
+    padding-left: 0px;
+    padding: 20px 10px;
+    padding: auto;
+    width: 145px;
+    min-width: max-content;
+    gap: 15px;
+
+    & .dropdown__link {
+      color: $header-text-color;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-family: Montserrat;
+    }
   }
 }
 
@@ -114,13 +113,14 @@ body {
   }
 
   & .dropdown__item:hover {
-    text-decoration: underline;
+    font-weight: 500;
   }
 }
 
 .header__contacts {
   display: flex;
   align-items: center;
+  font-family: WhitneySmm;
 
   & .header__contacts--phone {
     color: $header-text-color;

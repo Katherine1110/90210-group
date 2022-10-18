@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>90210-h-group</title>
     <link rel="stylesheet" href="./sass/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
+    </style>
   </head>
   <body>
     <!-- Navigation menu  -->
-
     <header class="header">
       <div class="header__wrapper">
         <nav class="header__menu menu">
@@ -25,18 +28,20 @@
                 <a class="menu__link" href="#">chauffeur</a>
               </li>
               <li class="menu__item dropdown">
-                about
-                <ul class="dropdown__list">
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">About us</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">Contact us</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">FAQ</a>
-                  </li>
-                </ul>
+                <span>about</span>
+                <div class="dropdown__wrapper">
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">About us</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">Contact us</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="#">FAQ</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
@@ -55,7 +60,6 @@
 
     <main>
       <!-- Hero -->
-
       <section class="hero">
         <div class="hero__content">
           <p>Your final destination in</p>
@@ -66,6 +70,61 @@
           <img src="./images/arrow-down.svg" alt="arrow-down" />
         </div>
       </section>
+
+      <!-- Swiper -->
+      <section>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide--content">
+                <p>
+                  help you to find an exotic car, a luxury home, and an unforgettable vacation
+                  experience.
+                </p>
+                <p>
+                  We pride ourselves on being the industry leaders in luxury car rental services.
+                  Our mission is to surpass all of your expectations from start to finish.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide--content">
+                <p>fhzbjzvd</p>
+                <p>dbfhbvhd</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide--content">
+                <p>fhzbjzvd</p>
+                <p>dbfhbvhd</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        grabCursor: true,
+        effect: 'creative',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        },
+      });
+    </script>
   </body>
 </html>

@@ -22,15 +22,18 @@
   color: $header-text-color;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  font-family: Montserrat;
 
   & p {
     font-size: 30px;
     line-height: 37px;
+    font-family: Montserrat;
   }
 
   & h1 {
     font-size: 48px;
     line-height: 58px;
+    font-family: Montserrat;
   }
 
   & span {
@@ -41,11 +44,21 @@
 }
 
 .hero__content--arrow {
-  animation: up_down 1s infinite alternate ease-in-out;
+  animation: up_down 2s infinite alternate ease-in-out;
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
   bottom: 40px;
   font-size: 40px;
   z-index: 1;
+}
+
+@keyframes up_down {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 30px;
+  }
 }
