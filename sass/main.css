@@ -1,18 +1,3 @@
-@font-face {
-  font-family: WhitneySmm;
-  src: url("../../images/Whitney_Smm.ttf");
-}
-
-@font-face {
-  font-family: Montserrat;
-  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
-}
-
-@font-face {
-  font-family: Freight;
-  src: url("../../images/FreightTextProLight-Italic.ttf");
-}
-
 /*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -270,19 +255,6 @@ summary {
   display: list-item;
 }
 
-body {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: 0.04em;
-  color: #000000;
-}
-
-section {
-  margin-bottom: 200px;
-}
-
 .header__wrapper {
   padding: 40px 50px;
   width: 100%;
@@ -354,7 +326,7 @@ section {
 }
 
 .menu__item.dropdown span::after {
-  content: url(../../images/menu_arrow-down.svg);
+  content: url(../../images/header/menu_arrow-down.svg);
   width: auto;
   height: auto;
   padding-left: 5px;
@@ -374,9 +346,7 @@ section {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   display: none;
-  padding-left: 0px;
   padding: 20px 10px;
-  padding: auto;
   width: 145px;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -386,13 +356,19 @@ section {
 
 .dropdown__wrapper .dropdown__list .dropdown__link {
   color: #ffffff;
+  font-size: 16px;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-family: Montserrat;
+}
+
+.dropdown__wrapper .dropdown__list .dropdown__link::first-letter {
+  font-size: 18px;
 }
 
 .menu__item.dropdown:hover {
   text-decoration: underline;
+  color: #fff;
 }
 
 .menu__item.dropdown:hover .dropdown__list {
@@ -473,12 +449,15 @@ section {
   font-size: 30px;
   line-height: 37px;
   font-family: Montserrat;
+  margin-bottom: 5px;
 }
 
 .hero__content h1 {
   font-size: 48px;
   line-height: 58px;
   font-family: Montserrat;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .hero__content span {
@@ -519,68 +498,102 @@ section {
   }
 }
 
-section {
-  padding-left: 240px;
-  padding-right: 240px;
+.slideshow {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .swiper {
-  width: 400px;
-  height: 500px;
-}
-
-.swiper-slide {
+  max-width: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 100px;
   font-size: 22px;
   font-weight: bold;
   color: #ffffff;
 }
 
-.swiper-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.swiper-slide__content {
+  max-width: 600px;
+  color: #000000;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-.swiper-slide--content {
-  position: relative;
-  right: 0px;
+.swiper-slide__content h4 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 35px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
-.swiper-slide--content p {
+.swiper-slide__content p {
+  font-family: 'Freight';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 35px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.swiper-slide__content .swiper-slide__img {
+  width: 400px;
+  height: 700px;
+}
+
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  text-align: center;
+  width: 20%;
+  bottom: 150px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #000;
+}
+
+body {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.04em;
   color: #000000;
 }
 
-.swiper-slide:nth-child(1n) {
-  background-image: url("../../images/Villa_1 1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+section {
+  margin-bottom: 200px;
 }
 
-.swiper-slide:nth-child(2n) {
-  background-image: url("../../images/swiper_car.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+@font-face {
+  font-family: WhitneySmm;
+  src: url("./fonts/Whitney_Smm.woff") format("woff");
 }
 
-.swiper-slide:nth-child(3n) {
-  background-image: url("../../images/marcheeta.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+@font-face {
+  font-family: Montserrat;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
 }
 
-.swiper-pagination {
-  position: relative;
+@font-face {
+  font-family: Freight;
+  src: url("./fonts/FreightTextProLight-Italic.woff") format("woff");
 }
 /*# sourceMappingURL=main.css.map */

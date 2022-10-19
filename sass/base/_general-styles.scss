@@ -1,0 +1,27 @@
+body {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: $main-text-color;
+}
+
+section {
+  margin-bottom: 200px;
+}
+
+@font-face {
+  font-family: WhitneySmm;
+  src: url('./fonts/Whitney_Smm.woff') format('woff');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
+}
+
+@font-face {
+  font-family: Freight;
+  src: url('./fonts/FreightTextProLight-Italic.woff') format('woff');
+}
