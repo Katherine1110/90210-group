@@ -1,0 +1,36 @@
+.possibility {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  & .possibility__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+
+  & .possibility__wrapper {
+    display: flex;
+    text-align: center;
+    gap: 30px;
+  }
+
+  & h5 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

@@ -431,8 +431,8 @@ summary {
   padding: 0px 50px 200px 50px;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.1))), url(../../images/hero_main_page.png);
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%), url(../../images/hero_main_page.png);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.1))), url(../../images/hero/hero_main_page.png);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%), url(../../images/hero/hero_main_page.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -584,7 +584,7 @@ section {
 
 @font-face {
   font-family: WhitneySmm;
-  src: url("./fonts/Whitney_Smm.woff") format("woff");
+  src: url("../../fonts/Whitney_Smm.woff") format("woff");
 }
 
 @font-face {
@@ -595,5 +595,353 @@ section {
 @font-face {
   font-family: Freight;
   src: url("./fonts/FreightTextProLight-Italic.woff") format("woff");
+}
+
+.cars-filter__header {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 120px;
+}
+
+.cars-filter__header h1 {
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.cars-filter__header .cars-filter__type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.cars-filter__header .cars-filter__type .cars-filter__item:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  height: 18px;
+  width: 1px;
+  margin-left: 20px;
+  background: #000;
+}
+
+.cars-type,
+.cars-brand {
+  padding-left: 50px;
+}
+
+.cars-type__scroll,
+.cars-brand__scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  margin-right: 0px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  grid-column-gap: 100px;
+  white-space: nowrap;
+}
+
+.cars-type__item,
+.cars-brand__item {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cars-type__item img,
+.cars-brand__item img {
+  margin-bottom: 20px;
+  width: 200px;
+  height: 130px;
+}
+
+.cars-type__item p,
+.cars-brand__item p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cars-type__item:last-child,
+.cars-brand__item:last-child {
+  margin-right: 50px;
+}
+
+.possibility {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.possibility .possibility__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
+.possibility .possibility__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  gap: 30px;
+}
+
+.possibility h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.possibility p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.chauffeur__wrapper {
+  background: rgba(47, 48, 58, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: chauffeur__content;
+      -ms-flex-align: chauffeur__content;
+          align-items: chauffeur__content;
+  max-width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, right top, left top, from(#000000), color-stop(62.5%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(../../images/chauffeur-service/chauffeur-service.png);
+  background-image: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0.5) 62.5%, rgba(0, 0, 0, 0) 100%), url(../../images/chauffeur-service/chauffeur-service.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.chauffeur__content {
+  color: #fff;
+  padding-right: 65px;
+  max-width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.chauffeur__content h3 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.chauffeur__content p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.chauffeur__content .chauffeur__info {
+  padding: 15px 30px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  width: 161px;
+  height: 49px;
+  color: #fff;
+  font-family: 'Whitney SSm';
+  text-transform: uppercase;
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.chauffeur__info:hover {
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+}
+
+.footer {
+  background: #101010;
+}
+
+.footer__wrapper {
+  padding: 100px 50px 50px 50px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.footer__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+}
+
+.footer__logo p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #999999;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.footer__logo p::first-letter {
+  font-size: 24px;
+}
+
+.footer__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.footer__contacts a {
+  color: #999999;
+  line-height: 19px;
+  text-decoration: none;
+}
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.form__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+.form__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  text-transform: uppercase;
+}
+
+.form__item input {
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.5px solid #999999;
+}
+
+.form__email {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__email button {
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  font-variant: small-caps;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+}
+
+.footer__links {
+  margin: 0 auto;
+  padding: 30px 50px 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__links a {
+  display: inline-block;
+  color: #999999;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+}
+
+.footer__links a:not(:last-child) {
+  margin-right: 50px;
 }
 /*# sourceMappingURL=main.css.map */
