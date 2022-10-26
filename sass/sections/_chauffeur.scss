@@ -45,10 +45,9 @@
     margin-bottom: 0px;
   }
 
-  & .chauffeur__info {
+  & .button {
     padding: 15px 30px;
     border: 1px solid #ffffff;
-    background: transparent;
     width: 161px;
     height: 49px;
     color: #fff;
@@ -57,10 +56,12 @@
     font-weight: 350;
     font-size: 16px;
     line-height: 19px;
+    width: fit-content;
+    transition: 300ms;
   }
 }
 
-.chauffeur__info:hover {
+.button:hover {
   cursor: pointer;
   background: $header-text-color;
   color: $main-text-color;

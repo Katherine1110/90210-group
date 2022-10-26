@@ -355,7 +355,7 @@ summary {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   display: none;
-  padding: 20px 30px;
+  padding: 20px 20px;
   width: 145px;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -522,11 +522,6 @@ summary {
   height: 100%;
 }
 
-.slideshow__wrapper.swiper {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
 .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,7 +564,6 @@ summary {
 }
 
 .slideshow__pagination {
-  padding-left: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,6 +572,11 @@ summary {
 
 .swiper-pagination.slideshow__pagination.swiper-pagination-bullets {
   bottom: 20px;
+  left: 13px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
 }
 
 .slideshow__pagination .swiper-pagination-bullet {
@@ -592,7 +591,7 @@ summary {
   content: '';
   width: 40px;
   height: 40px;
-  border: 1px solid #fff;
+  border: 1px solid transparent;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -607,6 +606,73 @@ summary {
   transition: 300ms;
 }
 
+.products__items {
+  margin-top: 100px;
+}
+
+.products__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+.products__name {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.products__name::first-letter {
+  font-size: 18px;
+}
+
+.products__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 500;
+}
+
+.products__features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.products__feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products__price.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 body {
   font-family: Montserrat;
   font-size: 16px;
@@ -618,6 +684,26 @@ body {
 
 section {
   margin-bottom: 200px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 @font-face {
@@ -635,31 +721,21 @@ section {
   src: url("../../fonts/FreightTextProLight-Italic.woff") format("woff");
 }
 
-.cars-filter__header {
-  padding-left: 50px;
-  padding-right: 50px;
+.products__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 120px;
-}
-
-.cars-filter__header h1 {
+  gap: 40px;
   text-transform: uppercase;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 37px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 100px;
 }
 
-.cars-filter__header .cars-filter__type {
+.products__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,62 +743,95 @@ section {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-  font-weight: 300;
+}
+
+.products__button {
+  position: relative;
+  padding-right: 20px;
+}
+
+.products__button:hover {
+  font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.cars-filter__header .cars-filter__type .cars-filter__item:not(:last-child)::after {
-  content: '';
-  display: inline-block;
-  height: 18px;
-  width: 1px;
-  margin-left: 20px;
-  background: #000;
-}
-
-.cars-type,
-.cars-brand {
-  padding-left: 50px;
-}
-
-.cars-type__scroll,
-.cars-brand__scroll {
+.delimiter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.products__types {
   overflow: auto;
-  margin-right: 0px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  grid-column-gap: 100px;
-  white-space: nowrap;
 }
 
-.cars-type__item,
-.cars-brand__item {
+.product__type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+.type__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.type__item img {
+  max-width: 180px;
+  width: 100%;
+}
+
+.type__item p {
   text-transform: uppercase;
-  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-.cars-type__item img,
-.cars-brand__item img {
-  margin-bottom: 20px;
-  width: 200px;
-  height: 130px;
+.type__item:hover {
+  opacity: 1;
 }
 
-.cars-type__item p,
-.cars-brand__item p {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.type__item:last-child {
+  padding-right: 50px;
 }
 
-.cars-type__item:last-child,
-.cars-brand__item:last-child {
-  margin-right: 50px;
+.type__item.product__option {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.type__item.product__option:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .possibility {
@@ -818,10 +927,9 @@ section {
   margin-bottom: 0px;
 }
 
-.chauffeur__content .chauffeur__info {
+.chauffeur__content .button {
   padding: 15px 30px;
   border: 1px solid #ffffff;
-  background: transparent;
   width: 161px;
   height: 49px;
   color: #fff;
@@ -830,9 +938,14 @@ section {
   font-weight: 350;
   font-size: 16px;
   line-height: 19px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
-.chauffeur__info:hover {
+.button:hover {
   cursor: pointer;
   background: #ffffff;
   color: #000000;

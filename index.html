@@ -67,176 +67,274 @@
           <span>car & villa rental service</span>
         </div>
         <div class="hero__content--arrow">
-          <img src="./images/hero/arrow-down.svg" alt="arrow-down" />
+          <img src="./images/hero/hero_arrow.svg" alt="arrow-down" />
         </div>
       </section>
 
       <!-- Swiper -->
 
       <section class="slideshow">
-        <!-- Slider main container -->
-        <div class="swiper slideshow__wrapper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="slideshow__text">
-                <h4>
-                  help you to find an exotic car, a luxury home, and an unforgettable vacation
-                  experience.
-                </h4>
-                <p>
-                  We pride ourselves on being the industry leaders in luxury car rental services.
-                  Our mission is to surpass all of your expectations from start to finish.
-                </p>
+        <div class="wrapper">
+          <div class="swiper slideshow__wrapper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slideshow__text">
+                  <h4>
+                    help you to find an exotic car, a luxury home, and an unforgettable vacation
+                    experience.
+                  </h4>
+                  <p>
+                    We pride ourselves on being the industry leaders in luxury car rental services.
+                    Our mission is to surpass all of your expectations from start to finish.
+                  </p>
+                </div>
+                <div class="slideshow__img">
+                  <img class="swiper-slide__img" src="./images/swiper/Villa_1 1.png" alt="" />
+                </div>
               </div>
-              <div class="slideshow__img">
-                <img class="swiper-slide__img" src="./images/swiper/Villa_1 1.png" alt="" />
+              <div class="swiper-slide">
+                <div class="slideshow__text">
+                  <h4>
+                    help you to find an exotic car, a luxury home, and an unforgettable vacation
+                    experience.
+                  </h4>
+                  <p>
+                    We pride ourselves on being the industry leaders in luxury car rental services.
+                    Our mission is to surpass all of your expectations from start to finish.
+                  </p>
+                </div>
+                <div class="slideshow__img">
+                  <img class="swiper-slide__img" src="./images/swiper/Villa_1 1.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slideshow__text">
+                  <h4>
+                    help you to find an exotic car, a luxury home, and an unforgettable vacation
+                    experience.
+                  </h4>
+                  <p>
+                    We pride ourselves on being the industry leaders in luxury car rental services.
+                    Our mission is to surpass all of your expectations from start to finish.
+                  </p>
+                </div>
+                <div class="slideshow__img">
+                  <img class="swiper-slide__img" src="./images/swiper/Villa_1 1.png" alt="" />
+                </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="slideshow__text">
-                <h4>
-                  help you to find an exotic car, a luxury home, and an unforgettable vacation
-                  experience.
-                </h4>
-                <p>
-                  We pride ourselves on being the industry leaders in luxury car rental services.
-                  Our mission is to surpass all of your expectations from start to finish.
-                </p>
-              </div>
-              <div class="slideshow__img">
-                <img class="swiper-slide__img" src="./images/swiper/Villa_1 1.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slideshow__text">
-                <h4>
-                  help you to find an exotic car, a luxury home, and an unforgettable vacation
-                  experience.
-                </h4>
-                <p>
-                  We pride ourselves on being the industry leaders in luxury car rental services.
-                  Our mission is to surpass all of your expectations from start to finish.
-                </p>
-              </div>
-              <div class="slideshow__img">
-                <img class="swiper-slide__img" src="./images/swiper/Villa_1 1.png" alt="" />
-              </div>
-            </div>
+
+            <div class="swiper-pagination slideshow__pagination"></div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination slideshow__pagination"></div>
         </div>
       </section>
 
-      <section class="cars-filter">
-        <div class="cars-filter__header">
-          <h1>choose your car</h1>
-          <div class="cars-filter__type">
-            <div class="cars-filter__item">
-              <label for="reset_filters">reset filters</label>
-              <input type="radio" name="cars_type" id="reset_filters" />
+      <section class="products">
+        <div class="wrapper">
+          <div class="products__header">
+            <h1>choose your car</h1>
+            <div class="products__buttons">
+              <div class="products__button products__button--reset hidden">
+                <img src="./images/icons/close.svg" alt="close button" />
+                <div>reset filters</div>
+              </div>
+              <div class="delimiter">
+                <div class="products__button">by type</div>
+                <div class="products__button">by brand</div>
+              </div>
             </div>
-            <div class="cars-filter__item">
-              <label for="by_type">by type</label>
-              <input type="radio" name="cars_type" id="by_type" checked />
+          </div>
+          <!-- cars type -->
+          <div class="products__types">
+            <div class="product__type type">
+              <div class="type__item">
+                <img src="./images/cars-types/Sedan.svg" alt="Sedan" />
+                <p>sedan</p>
+              </div>
+              <div class="type__item">
+                <img src="./images/cars-types/Electric.svg" alt="Electric" />
+                <p>electric</p>
+              </div>
+              <div class="type__item">
+                <img src="./images/cars-types/Supercar.svg" alt="Supercar" />
+                <p>supercar</p>
+              </div>
+              <div class="type__item">
+                <img src="./images/cars-types/Convertible.svg" alt="Convertible" />
+                <p>convertible</p>
+              </div>
+              <div class="type__item">
+                <img src="./images/cars-types/Luxury SUV.svg" alt="Luxury SUV" />
+                <p>luxury suv</p>
+              </div>
+              <div class="type__item">
+                <img src="./images/cars-types/Executive.svg" alt="Executive" />
+                <p>executive</p>
+              </div>
             </div>
-            <div class="cars-filter__item">
-              <label for="by_brand">by brand</label>
-              <input type="radio" name="cars_type" id="by_brand" />
+            <div class="product__type product__type--brands hidden">
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Audi.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Bentley.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/BMV.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Cadillac.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/chevrolet.png" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Ferrari.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Ford.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Lamborgini.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Land Rover.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Mercedes.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Posche.svg" alt="" />
+              </div>
+              <div class="type__item product__option">
+                <img src="./images/cars-brands/Rolls Royce.svg" alt="" />
+              </div>
             </div>
           </div>
         </div>
-        <!-- cars type -->
-        <div class="cars-type">
-          <div class="cars-type__scroll product__type">
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Sedan.svg" alt="" />
-              <p>sedan</p>
+        <div class="wrapper">
+          <div class="products__items swiper-products">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide products__item">
+                <div class="products__name">Tesla model 3</div>
+                <div class="products__image">
+                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                </div>
+                <div class="products__options">
+                  <div class="products__features">
+                    <div class="products__feature">
+                      <img src="./images/icons/person_icon.svg" alt="" />
+                      <div>5</div>
+                    </div>
+                    <div class="products__feature">
+                      <img src="./images/icons/transmission.svg" alt="" />
+                      <div>auto</div>
+                    </div>
+                  </div>
+                  <div class="products__price price">
+                    <div class="price__currency">$</div>
+                    <div class="price__amount">100</div>
+                    <div class="price__time">/day</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide products__item">
+                <div class="products__name">Tesla model 3</div>
+                <div class="products__image">
+                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                </div>
+                <div class="products__options">
+                  <div class="products__features">
+                    <div class="products__feature">
+                      <img src="./images/icons/person_icon.svg" alt="" />
+                      <div>5</div>
+                    </div>
+                    <div class="products__feature">
+                      <img src="./images/icons/transmission.svg" alt="" />
+                      <div>auto</div>
+                    </div>
+                  </div>
+                  <div class="products__price price">
+                    <div class="price__currency">$</div>
+                    <div class="price__amount">100</div>
+                    <div class="price__time">/day</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide products__item">
+                <div class="products__name">Tesla model 3</div>
+                <div class="products__image">
+                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                </div>
+                <div class="products__options">
+                  <div class="products__features">
+                    <div class="products__feature">
+                      <img src="./images/icons/person_icon.svg" alt="" />
+                      <div>5</div>
+                    </div>
+                    <div class="products__feature">
+                      <img src="./images/icons/transmission.svg" alt="" />
+                      <div>auto</div>
+                    </div>
+                  </div>
+                  <div class="products__price price">
+                    <div class="price__currency">$</div>
+                    <div class="price__amount">100</div>
+                    <div class="price__time">/day</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide products__item">
+                <div class="products__name">Tesla model 3</div>
+                <div class="products__image">
+                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                </div>
+                <div class="products__options">
+                  <div class="products__features">
+                    <div class="products__feature">
+                      <img src="./images/icons/person_icon.svg" alt="" />
+                      <div>5</div>
+                    </div>
+                    <div class="products__feature">
+                      <img src="./images/icons/transmission.svg" alt="" />
+                      <div>auto</div>
+                    </div>
+                  </div>
+                  <div class="products__price price">
+                    <div class="price__currency">$</div>
+                    <div class="price__amount">100</div>
+                    <div class="price__time">/day</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide products__item">
+                <div class="products__name">Tesla model 3</div>
+                <div class="products__image">
+                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                </div>
+                <div class="products__options">
+                  <div class="products__features">
+                    <div class="products__feature">
+                      <img src="./images/icons/person_icon.svg" alt="person_icon" />
+                      <div>5</div>
+                    </div>
+                    <div class="products__feature">
+                      <img src="./images/icons/transmission.svg" alt="transmission" />
+                      <div>auto</div>
+                    </div>
+                  </div>
+                  <div class="products__price price">
+                    <div class="price__currency">$</div>
+                    <div class="price__amount">100</div>
+                    <div class="price__time">/day</div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
             </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Electric.svg" alt="" />
-              <p>electric</p>
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Supercar.svg" alt="" />
-              <p>supercar</p>
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Convertible.svg" alt="" />
-              <p>convertible</p>
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Luxury SUV.svg" alt="" />
-              <p>luxury suv</p>
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Executive.svg" alt="" />
-              <p>executive</p>
-            </div>
-          </div>
-          <div class="cars-type__scroll product__type product__type--brands/greyscale">
-            <div class="cars-type__item product__option">
-              <img src="./images/cars-types/Sedan.svg" alt="" />
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Electric.svg" alt="" />
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Supercar.svg" alt="" />
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Convertible.svg" alt="" />
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Luxury SUV.svg" alt="" />
-            </div>
-            <div class="cars-type__item">
-              <img src="./images/cars-types/Executive.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <!-- cars brand -->
-        <div class="cars-brand">
-          <div class="cars-brand__scroll">
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Audi.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Bentley.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/BMV.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Cadillac.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Chevrolet.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Ferrari.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Ford.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Lamborgini.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Land Rover.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Mercedes.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Posche.svg" alt="" />
-            </div>
-            <div class="cars-brand__item">
-              <img src="./images/cars-brands/Rolls Royce.svg" alt="" />
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </section>
@@ -271,7 +369,7 @@
             </p>
           </div>
           <div class="possibility__item">
-            <img src="./images/icons/assistance.svg" alt="assistance" />
+            <img src="./images/icons/support24.svg" alt="support24" />
             <h5>Roadside assistance</h5>
             <p>
               We re available to help with anything that comes up with our 24/7 customer service
@@ -291,7 +389,7 @@
               Get your privat and luxurious transportation when and where you need it, all while
               enjoying being in and being seen in a superb vehicle.
             </p>
-            <button class="chauffeur__info" type="button">read more</button>
+            <a class="button">read more</a>
           </div>
         </div>
       </section>
@@ -362,21 +460,31 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
-      const swiper = new Swiper('.swiper', {
+      const swiper1 = new Swiper('.swiper', {
         grabCursor: true,
-        effect: 'creative',
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
+        spaceBetween: 30,
         creativeEffect: {
           prev: {
-            shadow: true,
             translate: [0, 0, -400],
           },
           next: {
             translate: ['100%', 0, 0],
           },
+        },
+      });
+
+      const swiper2 = new Swiper('.swiper-products', {
+        grabCursor: true,
+
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
       });
     </script>

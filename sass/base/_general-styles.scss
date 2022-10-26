@@ -11,6 +11,26 @@ section {
   margin-bottom: 200px;
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 @font-face {
   font-family: WhitneySmm;
   src: url('../../fonts/Whitney_Smm.woff') format('woff');
