@@ -118,6 +118,10 @@
     & .dropdown__item:hover {
       font-weight: 500;
     }
+
+    & .dropdown__item::first-letter {
+      font-size: 18px;
+    }
   }
 }
 

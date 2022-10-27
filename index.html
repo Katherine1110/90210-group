@@ -213,7 +213,7 @@
           </div>
         </div>
         <div class="wrapper">
-          <div class="products__items swiper-products">
+          <div class="products__items swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide products__item">
                 <div class="products__name">Tesla model 3</div>
@@ -330,8 +330,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div> -->
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -477,7 +475,7 @@
         },
       });
 
-      const swiper2 = new Swiper('.swiper-products', {
+      const swiper2 = new Swiper('.products__items.swiper', {
         grabCursor: true,
 
         slidesPerView: 3,
