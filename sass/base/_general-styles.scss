@@ -22,13 +22,54 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .wrapper {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.button {
+  padding: 15px 30px;
+  border: 1px solid #ffffff;
+  width: 160px;
+  height: 49px;
+  color: #fff;
+  font-family: WhitneySmm;
+  text-transform: uppercase;
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 19px;
+  width: fit-content;
+  transition: 300ms;
+  background: transparent;
+
+  &:hover {
+    cursor: pointer;
+    background: $header-text-color;
+    color: $main-text-color;
+  }
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 @font-face {

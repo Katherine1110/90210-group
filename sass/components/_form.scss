@@ -1,0 +1,83 @@
+.modal {
+  z-index: 1000;
+  width: 100%;
+  position: relative;
+
+  display: none;
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: auto;
+
+  max-width: 840px;
+  height: 100%;
+  padding: 50px;
+  background: #fff;
+
+  & img {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
+
+.booking__types {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  justify-content: center;
+
+  & .products__button {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+.form {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  & .form__row {
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & label {
+    margin-bottom: 20px;
+  }
+
+  & input {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #999;
+    outline: none;
+
+    // font-family: Montserrat;
+  }
+}
+
+.form__button {
+  border: 1px solid #000000;
+  color: #000000;
+
+  &:hover {
+    background: #000000;
+    color: #fff;
+  }
+}

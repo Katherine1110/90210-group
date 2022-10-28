@@ -52,7 +52,7 @@
           </div>
           <div class="header__contacts">
             <a class="header__contacts--phone" href="tel:+41 22 779 33 33">+41 22 779 33 33</a>
-            <button type="button" class="header__contacts--button">book now</button>
+            <button type="button" class="button">book now</button>
           </div>
         </nav>
       </div>
@@ -71,18 +71,116 @@
         </div>
       </section>
 
+      <!-- Modal -->
+      <div class="modal booking">
+        <div class="modal__wrapper">
+          <img src="./images/icons/close.svg" alt="close" />
+          <div class="booking__types delimiter">
+            <div class="products__button">car rental</div>
+            <div class="products__button">villa rental</div>
+          </div>
+          <div class="booking__form">
+            <h4>select car and dates</h4>
+
+            <form>
+              <div class="form">
+                <div class="form__row">
+                  <div class="form__input">
+                    <label for="brand">Brand</label>
+                    <select name="brand" id="brand">
+                      <option value="">Select brand</option>
+                      <option value="">Select brand</option>
+                      <option value="">Select brand</option>
+                    </select>
+                  </div>
+
+                  <div class="form__input">
+                    <label for="car">Model</label>
+                    <select name="car" id="car">
+                      <option value="">Select car</option>
+                      <option value="">Select car</option>
+                      <option value="">Select car</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__input">
+                    <label for="start">Start date:</label>
+                    <input type="date" id="start" name="trip-start" value="2022/01/08" />
+                  </div>
+
+                  <div class="form__input">
+                    <label for="end">End date:</label>
+                    <input type="date" id="end" name="trip-end" value="2022/10/08" />
+                  </div>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__input">
+                    <label for="first_name">First name</label>
+                    <input
+                      type="text"
+                      id="first_name"
+                      name="first_name"
+                      placeholder="Your first name" />
+                  </div>
+
+                  <div class="form__input">
+                    <label for="last_name">Last name</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Your last name" />
+                  </div>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__input">
+                  <label for="phone">Phone number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(999) 999-9999" />
+                </div>
+
+                <div class="form__input">
+                  <label for="email">Phone number</label>
+                  <input type="email" id="email" name="email" placeholder="Your email" />
+                </div>
+                </div>
+
+                <div class="form__input">
+                  <label for="comments">Your comments</label>
+                  <input type="text" id="comments" name="comments" placeholder="Your comments" />
+                </div>
+
+                 <div>
+                  <label for="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    Do you need a driver?
+                  </label>
+                </div>
+
+                <div>
+                  <button class="form__button button" type="submit">book now</button>
+                </div>
+              </div>
+            
+              </div>
+
+             
+            </form>
+          </div>
+        </div>
+      </div>
+
       <!-- Swiper -->
 
       <section class="slideshow">
         <div class="wrapper">
-          <div class="swiper slideshow__wrapper">
+          <div class="swiper slideshow__swipper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="slideshow__text">
-                  <h4>
+                  <h5>
                     help you to find an exotic car, a luxury home, and an unforgettable vacation
                     experience.
-                  </h4>
+                  </h5>
                   <p>
                     We pride ourselves on being the industry leaders in luxury car rental services.
                     Our mission is to surpass all of your expectations from start to finish.
@@ -94,10 +192,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="slideshow__text">
-                  <h4>
+                  <h5>
                     help you to find an exotic car, a luxury home, and an unforgettable vacation
                     experience.
-                  </h4>
+                  </h5>
                   <p>
                     We pride ourselves on being the industry leaders in luxury car rental services.
                     Our mission is to surpass all of your expectations from start to finish.
@@ -109,10 +207,10 @@
               </div>
               <div class="swiper-slide">
                 <div class="slideshow__text">
-                  <h4>
+                  <h5>
                     help you to find an exotic car, a luxury home, and an unforgettable vacation
                     experience.
-                  </h4>
+                  </h5>
                   <p>
                     We pride ourselves on being the industry leaders in luxury car rental services.
                     Our mission is to surpass all of your expectations from start to finish.
@@ -132,11 +230,11 @@
       <section class="products">
         <div class="wrapper">
           <div class="products__header">
-            <h1>choose your car</h1>
+            <h4>choose your car</h4>
             <div class="products__buttons">
               <div class="products__button products__button--reset hidden">
                 <img src="./images/icons/close.svg" alt="close button" />
-                <div>reset filters</div>
+                reset filters
               </div>
               <div class="delimiter">
                 <div class="products__button">by type</div>
@@ -212,244 +310,319 @@
             </div>
           </div>
         </div>
-        <div class="wrapper">
-          <div class="products__items swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide products__item">
-                <div class="products__name">Tesla model 3</div>
-                <div class="products__image">
-                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
-                </div>
-                <div class="products__options">
-                  <div class="products__features">
-                    <div class="products__feature">
-                      <img src="./images/icons/person_icon.svg" alt="" />
-                      <div>5</div>
-                    </div>
-                    <div class="products__feature">
-                      <img src="./images/icons/transmission.svg" alt="" />
-                      <div>auto</div>
-                    </div>
-                  </div>
-                  <div class="products__price price">
-                    <div class="price__currency">$</div>
-                    <div class="price__amount">100</div>
-                    <div class="price__time">/day</div>
-                  </div>
-                </div>
+        <!-- <div class="wrapper"> -->
+        <div class="products__items wrapper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide products__item">
+              <div class="products__name">Tesla model 3</div>
+              <div class="products__image">
+                <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                <img src="./images/villas-slider/franklin.png" alt="" />
               </div>
-              <div class="swiper-slide products__item">
-                <div class="products__name">Tesla model 3</div>
-                <div class="products__image">
-                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
-                </div>
-                <div class="products__options">
-                  <div class="products__features">
-                    <div class="products__feature">
-                      <img src="./images/icons/person_icon.svg" alt="" />
-                      <div>5</div>
-                    </div>
-                    <div class="products__feature">
-                      <img src="./images/icons/transmission.svg" alt="" />
-                      <div>auto</div>
-                    </div>
+              <div class="products__options">
+                <div class="products__features">
+                  <div class="products__feature">
+                    <img src="./images/icons/person_icon.svg" alt="" />
+                    <div>5</div>
                   </div>
-                  <div class="products__price price">
-                    <div class="price__currency">$</div>
-                    <div class="price__amount">100</div>
-                    <div class="price__time">/day</div>
+                  <div class="products__feature">
+                    <img src="./images/icons/transmission.svg" alt="" />
+                    <div>auto</div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide products__item">
-                <div class="products__name">Tesla model 3</div>
-                <div class="products__image">
-                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
-                </div>
-                <div class="products__options">
-                  <div class="products__features">
-                    <div class="products__feature">
-                      <img src="./images/icons/person_icon.svg" alt="" />
-                      <div>5</div>
-                    </div>
-                    <div class="products__feature">
-                      <img src="./images/icons/transmission.svg" alt="" />
-                      <div>auto</div>
-                    </div>
-                  </div>
-                  <div class="products__price price">
-                    <div class="price__currency">$</div>
-                    <div class="price__amount">100</div>
-                    <div class="price__time">/day</div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide products__item">
-                <div class="products__name">Tesla model 3</div>
-                <div class="products__image">
-                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
-                </div>
-                <div class="products__options">
-                  <div class="products__features">
-                    <div class="products__feature">
-                      <img src="./images/icons/person_icon.svg" alt="" />
-                      <div>5</div>
-                    </div>
-                    <div class="products__feature">
-                      <img src="./images/icons/transmission.svg" alt="" />
-                      <div>auto</div>
-                    </div>
-                  </div>
-                  <div class="products__price price">
-                    <div class="price__currency">$</div>
-                    <div class="price__amount">100</div>
-                    <div class="price__time">/day</div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide products__item">
-                <div class="products__name">Tesla model 3</div>
-                <div class="products__image">
-                  <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
-                </div>
-                <div class="products__options">
-                  <div class="products__features">
-                    <div class="products__feature">
-                      <img src="./images/icons/person_icon.svg" alt="person_icon" />
-                      <div>5</div>
-                    </div>
-                    <div class="products__feature">
-                      <img src="./images/icons/transmission.svg" alt="transmission" />
-                      <div>auto</div>
-                    </div>
-                  </div>
-                  <div class="products__price price">
-                    <div class="price__currency">$</div>
-                    <div class="price__amount">100</div>
-                    <div class="price__time">/day</div>
-                  </div>
+                <div class="products__price price">
+                  <div class="price__currency">$</div>
+                  <div class="price__amount">100</div>
+                  <div class="price__time">/day</div>
                 </div>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-slide products__item">
+              <div class="products__name">Tesla model 3</div>
+              <div class="products__image">
+                <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                <img src="./images/villas-slider/franklin.png" alt="" />
+              </div>
+              <div class="products__options">
+                <div class="products__features">
+                  <div class="products__feature">
+                    <img src="./images/icons/person_icon.svg" alt="" />
+                    <div>5</div>
+                  </div>
+                  <div class="products__feature">
+                    <img src="./images/icons/transmission.svg" alt="" />
+                    <div>auto</div>
+                  </div>
+                </div>
+                <div class="products__price price">
+                  <div class="price__currency">$</div>
+                  <div class="price__amount">100</div>
+                  <div class="price__time">/day</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide products__item">
+              <div class="products__name">Tesla model 3</div>
+              <div class="products__image">
+                <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                <img src="./images/villas-slider/franklin.png" alt="" />
+              </div>
+              <div class="products__options">
+                <div class="products__features">
+                  <div class="products__feature">
+                    <img src="./images/icons/person_icon.svg" alt="" />
+                    <div>5</div>
+                  </div>
+                  <div class="products__feature">
+                    <img src="./images/icons/transmission.svg" alt="" />
+                    <div>auto</div>
+                  </div>
+                </div>
+                <div class="products__price price">
+                  <div class="price__currency">$</div>
+                  <div class="price__amount">100</div>
+                  <div class="price__time">/day</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide products__item">
+              <div class="products__name">Tesla model 3</div>
+              <div class="products__image">
+                <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                <img src="./images/villas-slider/franklin.png" alt="" />
+              </div>
+              <div class="products__options">
+                <div class="products__features">
+                  <div class="products__feature">
+                    <img src="./images/icons/person_icon.svg" alt="" />
+                    <div>5</div>
+                  </div>
+                  <div class="products__feature">
+                    <img src="./images/icons/transmission.svg" alt="" />
+                    <div>auto</div>
+                  </div>
+                </div>
+                <div class="products__price price">
+                  <div class="price__currency">$</div>
+                  <div class="price__amount">100</div>
+                  <div class="price__time">/day</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide products__item">
+              <div class="products__name">Tesla model 3</div>
+              <div class="products__image">
+                <img src="./images/cars-slider/tesla_model_3.png" alt="tesla_model_3" />
+                <img src="./images/villas-slider/franklin.png" alt="" />
+              </div>
+              <div class="products__options">
+                <div class="products__features">
+                  <div class="products__feature">
+                    <img src="./images/icons/person_icon.svg" alt="person_icon" />
+                    <div>5</div>
+                  </div>
+                  <div class="products__feature">
+                    <img src="./images/icons/transmission.svg" alt="transmission" />
+                    <div>auto</div>
+                  </div>
+                </div>
+                <div class="products__price price">
+                  <div class="price__currency">$</div>
+                  <div class="price__amount">100</div>
+                  <div class="price__time">/day</div>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- </div> -->
         </div>
       </section>
 
       <!-- possibility -->
 
       <section class="possibility">
-        <h3 class="possibility__title">live your worries behind</h3>
-        <div class="possibility__wrapper">
-          <div class="possibility__item">
-            <img src="./images/icons/reservation.svg" alt="reservation" />
-            <h5>Last minute reservations</h5>
-            <p>
-              We can accommodate clients on any schedule. We take the impossible and turn it into
-              the possible.
-            </p>
-          </div>
-          <div class="possibility__item">
-            <img src="./images/icons/free_returns.svg" alt="free_returns" />
-            <h5>Hassle free returns</h5>
-            <p>
-              You don t have to worry about washing or gassing up your exotic car rental; we take
-              care of everything.
-            </p>
-          </div>
-          <div class="possibility__item">
-            <img src="./images/icons/flexebility.svg" alt="flexebility" />
-            <h5>Flexibility</h5>
-            <p>
-              Early pick up or late return? Delivery to a different city like San Francisco, Napa,
-              San Diego, or Las Vegas.
-            </p>
-          </div>
-          <div class="possibility__item">
-            <img src="./images/icons/support24.svg" alt="support24" />
-            <h5>Roadside assistance</h5>
-            <p>
-              We re available to help with anything that comes up with our 24/7 customer service
-              line.
-            </p>
+        <div class="wrapper">
+          <h4>live your worries behind</h4>
+          <div class="possibility__wrapper">
+            <div class="possibility__item">
+              <img src="./images/icons/reservation.svg" alt="reservation" />
+              <h5>Last minute reservations</h5>
+              <p>
+                We can accommodate clients on any schedule. We take the impossible and turn it into
+                the possible.
+              </p>
+            </div>
+            <div class="possibility__item">
+              <img src="./images/icons/free_returns.svg" alt="free_returns" />
+              <h5>Hassle free returns</h5>
+              <p>
+                You don t have to worry about washing or gassing up your exotic car rental; we take
+                care of everything.
+              </p>
+            </div>
+            <div class="possibility__item">
+              <img src="./images/icons/flexebility.svg" alt="flexebility" />
+              <h5>Flexibility</h5>
+              <p>
+                Early pick up or late return? Delivery to a different city like San Francisco, Napa,
+                San Diego, or Las Vegas.
+              </p>
+            </div>
+            <div class="possibility__item">
+              <img src="./images/icons/support24.svg" alt="support24" />
+              <h5>Roadside assistance</h5>
+              <p>
+                We re available to help with anything that comes up with our 24/7 customer service
+                line.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- chauffeur service -->
 
-      <section class="chauffeur">
-        <div class="chauffeur__wrapper">
-          <div class="chauffeur__content">
-            <h3>luxury chauffeur service</h3>
+      <section class="focus">
+        <div class="wrapper focus__wrapper">
+          <div class="focus__content">
+            <h4>luxury chauffeur service</h4>
             <p>
               Get your privat and luxurious transportation when and where you need it, all while
               enjoying being in and being seen in a superb vehicle.
             </p>
-            <a class="button">read more</a>
+            <a href="#" class="button">read more</a>
           </div>
         </div>
       </section>
 
+      <!-- FAQ -->
+
+      <section class="faq">
+        <div class="wrapper">
+          <h4>frequently asked questions</h4>
+          <div class="faq__items">
+            <div class="faq__item">
+              <div class="faq__question" onclick='toggleClass()'>
+                <h5>
+                  I have car insurance that covers me for driving in other cars. Do I still need to
+                  purchase your insurance policy?
+                </h5>
+                <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
+              </div>
+              <div class="faq__answer hidden">
+                To make a reservation, click the reserve button underneath the picture of the
+                vehicle that you wish to rent. This will take you to the reservation request page
+                that will ask for your contact and billing information and the dates that you wish
+                to reserve the vehicle. When you have completed this information, hit submit, and
+                that will start the reservation process.
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question" onclick='toggleClass()'>
+                <h5>How do I make a reservation?</h5>
+                <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
+              </div>
+              <div class="faq__answer hidden">
+                To make a reservation, click the reserve button underneath the picture of the
+                vehicle that you wish to rent. This will take you to the reservation request page
+                that will ask for your contact and billing information and the dates that you wish
+                to reserve the vehicle. When you have completed this information, hit submit, and
+                that will start the reservation process.
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question" onclick='toggleClass()'>
+                <h5>When can I return my rental?</h5>
+                <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
+              </div>
+              <div class="faq__answer hidden">
+                To make a reservation, click the reserve button underneath the picture of the
+                vehicle that you wish to rent. This will take you to the reservation request page
+                that will ask for your contact and billing information and the dates that you wish
+                to reserve the vehicle. When you have completed this information, hit submit, and
+                that will start the reservation process.
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question" onclick='toggleClass()'>
+                <h5>Can I leave California?</h5>
+                <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
+              </div>
+              <div class="faq__answer hidden">
+                To make a reservation, click the reserve button underneath the picture of the
+                vehicle that you wish to rent. This will take you to the reservation request page
+                that will ask for your contact and billing information and the dates that you wish
+                to reserve the vehicle. When you have completed this information, hit submit, and
+                that will start the reservation process.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- footer -->
       <footer class="footer">
-        <div class="footer__wrapper">
-          <div class="footer__main">
-            <div class="footer__logo">
-              <img src="./images/footer/logo.svg" alt="" />
-              <p>Luxury rental service</p>
+        <div class="wrapper">
+          <div class="footer__content">
+            <div class="footer__info">
+              <div class="footer__logo">
+                <img src="./images/footer/logo.svg" alt="" />
+                <p>Luxury rental service</p>
+              </div>
+              <div class="footer__contacts">
+                <a href="tel:+41 22 779 33 33">+41 22 779 33 33</a>
+                <a href="mailto:info@90210hgroup.com">info@90210hgroup.com</a>
+              </div>
+              <div class="footer__socials">
+                <img src="./images/icons/inst.svg" alt="" />
+                <img src="./images/icons/faceboock.svg" alt="" />
+                <img src="./images/icons/tg.svg" alt="" />
+                <img src="./images/icons/wapp.svg" alt="" />
+              </div>
             </div>
-            <div class="footer__contacts">
-              <a href="tel:+41 22 779 33 33">+41 22 779 33 33</a>
-              <a href="mailto:info@90210hgroup.com">info@90210hgroup.com</a>
-            </div>
-            <div class="footer__socials">
-              <img src="./images/icons/inst.svg" alt="" />
-              <img src="./images/icons/faceboock.svg" alt="" />
-              <img src="./images/icons/tg.svg" alt="" />
-              <img src="./images/icons/wapp.svg" alt="" />
+            <div class="form">
+              <form class="footer__form">
+                <div class="form__wrapper">
+                  <h4 class="form__title">Contact us</h4>
+
+                  <div class="form__inputs">
+                    <div class="form__item">
+                      <label for="name">name</label>
+                      <input type="text" name="name" id="name" />
+                    </div>
+                    <div class="form__item">
+                      <label for="mobile">mobile</label>
+                      <input type="tel" name="mobile" id="mobile" />
+                    </div>
+                  </div>
+
+                  <div class="form__email form__item">
+                    <div>
+                      <label for="email">email</label>
+                      <input type="email" name="email" id="email" />
+                    </div>
+                    <div>
+                      <button type="submit">
+                        <span>send</span>
+                        <img src="./images/footer/send_arrow.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
 
-          <form class="form">
-            <div class="form__wrapper">
-              <p class="form__title">Contact us</p>
-
-              <div class="form__inputs">
-                <div class="form__item">
-                  <label for="name">name</label>
-                  <input type="text" name="name" id="name" />
-                </div>
-                <div class="form__item">
-                  <label for="mobile">mobile</label>
-                  <input type="tel" name="mobile" id="mobile" />
-                </div>
-              </div>
-
-              <div class="form__email form__item">
-                <div>
-                  <label for="email">email</label>
-                  <input type="email" name="email" id="email" />
-                </div>
-                <div>
-                  <button type="submit">
-                    <span>send</span>
-                    <img src="./images/footer/send_arrow.svg" alt="" />
-                  </button>
-                </div>
-              </div>
+          <div class="footer__links">
+            <div>
+              <a href="">© 2022, 90210 H GROUP</a>
+              <a href="">Terms & Conditions</a>
+              <a href="">Privacy Policy</a>
             </div>
-          </form>
-        </div>
-        <div class="footer__links">
-          <div>
-            <a href="">© 2022, 90210 H GROUP</a>
-            <a href="">Terms & Conditions</a>
-            <a href="">Privacy Policy</a>
-          </div>
-          <div>
-            <a href="">Made by teh</a>
+            <div>
+              <a href="">Made by teh</a>
+            </div>
           </div>
         </div>
       </footer>
@@ -458,21 +631,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
-      const swiper1 = new Swiper('.swiper', {
+      const swiper1 = new Swiper('.slideshow .swiper', {
         grabCursor: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
         spaceBetween: 30,
-        creativeEffect: {
-          prev: {
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
-        },
       });
 
       const swiper2 = new Swiper('.products__items.swiper', {
@@ -485,6 +650,19 @@
           prevEl: '.swiper-button-prev',
         },
       });
+
+      const toggleClass = () => {
+        const toggler = document.querySelector('.faq__question');
+        toggler.classList.toggle('toggle')
+        const answer = document.querySelector('.faq__answer');
+        answer.classList.toggle('hidden')
+      }
+
+      //   const toggler = document.querySelector('.faq__question');
+      //   const answer = document.querySelector('.faq__answer');
+
+ 
+
     </script>
   </body>
 </html>

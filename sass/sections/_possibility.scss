@@ -1,29 +1,27 @@
 .possibility {
-  padding-left: 50px;
-  padding-right: 50px;
-
-  & .possibility__title {
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 37px;
+  & h4 {
     text-align: center;
-    text-transform: uppercase;
-    margin-top: 0;
     margin-bottom: 100px;
   }
 
   & .possibility__wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
     text-align: center;
-    gap: 30px;
+
+    gap: 60px;
   }
 
   & h5 {
-    font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    &::first-letter {
+      font-size: 20px;
+    }
   }
 
   & p {

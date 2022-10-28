@@ -1,4 +1,4 @@
-.chauffeur__wrapper {
+.focus__wrapper {
   background: rgba(47, 48, 58, 0.8);
   display: flex;
   justify-content: flex-end;
@@ -19,7 +19,7 @@
   background-position: 50% 50%;
 }
 
-.chauffeur__content {
+.focus__content {
   color: #fff;
   padding-right: 65px;
   max-width: 40%;
@@ -28,15 +28,6 @@
   justify-content: center;
   gap: 30px;
 
-  & h3 {
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 37px;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0px;
-  }
-
   & p {
     font-weight: 300;
     font-size: 18px;
@@ -44,25 +35,4 @@
     margin-top: 0;
     margin-bottom: 0px;
   }
-
-  & .button {
-    padding: 15px 30px;
-    border: 1px solid #ffffff;
-    width: 161px;
-    height: 49px;
-    color: #fff;
-    font-family: WhitneySmm;
-    text-transform: uppercase;
-    font-weight: 350;
-    font-size: 16px;
-    line-height: 19px;
-    width: fit-content;
-    transition: 300ms;
-  }
-}
-
-.button:hover {
-  cursor: pointer;
-  background: $header-text-color;
-  color: $main-text-color;
 }
