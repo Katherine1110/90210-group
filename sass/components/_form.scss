@@ -3,7 +3,11 @@
   width: 100%;
   position: relative;
 
-  display: none;
+  // display: none;
+}
+
+.booking {
+  width: 840px;
 }
 
 .modal__wrapper {
@@ -11,7 +15,7 @@
   top: 0;
   right: 0;
   overflow: auto;
-
+  width: 100%;
   max-width: 840px;
   height: 100%;
   padding: 50px;
@@ -68,7 +72,7 @@
     border-bottom: 1px solid #999;
     outline: none;
 
-    // font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
   }
 }
 
