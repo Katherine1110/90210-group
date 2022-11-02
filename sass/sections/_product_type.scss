@@ -16,6 +16,10 @@
   position: relative;
   padding-right: 20px;
   transition: 300ms;
+
+  &.active {
+    font-weight: 600;
+  }
 }
 
 .products__button:hover {

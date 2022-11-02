@@ -52,12 +52,12 @@
           </div>
           <div class="header__contacts">
             <a class="header__contacts--phone" href="tel:+41 22 779 33 33">+41 22 779 33 33</a>
-            <button type="button" class="button">book now</button>
+            <button data-modal-open type="button" class="button">book now</button>
           </div>
         </nav>
       </div>
     </header>
-
+    <!-- data-modal-toggle= -->
     <main>
       <!-- Hero -->
       <section class="hero">
@@ -72,21 +72,21 @@
       </section>
 
       <!-- Modal -->
-      <div class="modal booking">
+      <div class="modal booking" data-modal>
         <div class="modal__wrapper">
-          <div class="booking__background"></div>
-          <img src="./images/icons/close.svg" alt="close" />
+          <img src="./images/icons/close.svg" alt="close" data-modal-close />
           <div class="booking__types delimiter">
-            <div class="products__button">car rental</div>
-            <div class="products__button">villa rental</div>
+            <div data-type="car" class="products__button active">car rental</div>
+            <div data-type="villa" class="products__button">villa rental</div>
           </div>
-          <div class="booking__form">
-            <h4>select car and dates</h4>
+          <div data-type="car" class="booking__form">
+            <h4 data-type="car">select car and dates</h4>
+            <h4 data-type="villa" class="hidden">select villa and dates</h4>
 
-            <form>
+            <form class="cars">
               <div class="form">
                 <div class="form__row">
-                  <div class="form__input">
+                  <div class="form__input" data-type="car">
                     <label for="brand">Brand</label>
                     <select name="brand" id="brand">
                       <option value="">Select brand</option>
@@ -95,12 +95,120 @@
                     </select>
                   </div>
 
-                  <div class="form__input">
+                  <div class="form__input hidden" data-type="villa">
+                    <label for="brand">Type</label>
+                    <select name="type" id="type">
+                      <option value="">Select type</option>
+                      <option value="">Select type</option>
+                      <option value="">Select type</option>
+                    </select>
+                  </div>
+
+                  <div class="form__input" data-type="car">
                     <label for="car">Model</label>
                     <select name="car" id="car">
                       <option class="option" value="Select car">Select car</option>
                       <option class="option" value="Select car">Select car</option>
                       <option class="option" value="Select car">Select car</option>
+                    </select>
+                  </div>
+
+                  <div class="form__input hidden" data-type="villa">
+                    <label for="car">Villa</label>
+                    <select name="car" id="car">
+                      <option class="option" value="Select car">Select villa</option>
+                      <option class="option" value="Select car">Select villa</option>
+                      <option class="option" value="Select car">Select villa</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__input">
+                    <label for="start">Start date:</label>
+                    <input
+                      class="option"
+                      type="date"
+                      id="start"
+                      name="trip-start"
+                      value="2022/01/08"
+                    />
+                  </div>
+
+                  <div class="form__input">
+                    <label for="end">End date:</label>
+                    <input class="option" type="date" id="end" name="trip-end" value="2022/10/08" />
+                  </div>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__input">
+                    <label for="first_name">First name</label>
+                    <input
+                      type="text"
+                      id="first_name"
+                      name="first_name"
+                      placeholder="Your first name"
+                    />
+                  </div>
+
+                  <div class="form__input">
+                    <label for="last_name">Last name</label>
+                    <input
+                      type="text"
+                      id="last_name"
+                      name="last_name"
+                      placeholder="Your last name"
+                    />
+                  </div>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__input">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(999) 999-9999" />
+                  </div>
+
+                  <div class="form__input">
+                    <label for="email">Phone number</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" />
+                  </div>
+                </div>
+
+                <div class="form__input">
+                  <label for="comments">Your comments</label>
+                  <input type="text" id="comments" name="comments" placeholder="Your comments" />
+                </div>
+
+                <div>
+                  <input type="checkbox" name="checkbox" id="checkbox" />
+                  <label for="checkbox"> Do you need a driver? </label>
+                </div>
+
+                <div>
+                  <button class="form__button button" type="submit">book now</button>
+                </div>
+              </div>
+            </form>
+
+            <form class="villas hidden">
+              <div class="form">
+                <div class="form__row">
+                  <div class="form__input">
+                    <label for="brand">Type</label>
+                    <select name="type" id="type">
+                      <option value="">Select type</option>
+                      <option value="">Select type</option>
+                      <option value="">Select type</option>
+                    </select>
+                  </div>
+
+                  <div class="form__input">
+                    <label for="car">Villa</label>
+                    <select name="car" id="car">
+                      <option class="option" value="Select car">Select villa</option>
+                      <option class="option" value="Select car">Select villa</option>
+                      <option class="option" value="Select car">Select villa</option>
                     </select>
                   </div>
                 </div>
@@ -174,6 +282,7 @@
             </form>
           </div>
         </div>
+        <div class="modal__background" data-modal-close></div>
       </div>
 
       <!-- Swiper -->
@@ -238,13 +347,13 @@
         <div class="wrapper">
           <div class="products__header">
             <h4>choose your car</h4>
-            <div class="products__buttons">
+            <div class="products__buttons active">
               <div class="products__button products__button--reset hidden">
                 <img src="./images/icons/close.svg" alt="close button" />
                 reset filters
               </div>
               <div class="delimiter">
-                <div class="products__button">by type</div>
+                <div class="products__button active">by type</div>
                 <div class="products__button">by brand</div>
               </div>
             </div>
@@ -511,7 +620,7 @@
           <h4>frequently asked questions</h4>
           <div class="faq__items">
             <div class="faq__item">
-              <div class="faq__question" onclick="toggleClass()">
+              <div class="faq__question">
                 <h5>
                   I have car insurance that covers me for driving in other cars. Do I still need to
                   purchase your insurance policy?
@@ -527,7 +636,7 @@
               </div>
             </div>
             <div class="faq__item">
-              <div class="faq__question" onclick="toggleClass()">
+              <div class="faq__question">
                 <h5>How do I make a reservation?</h5>
                 <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
               </div>
@@ -540,7 +649,7 @@
               </div>
             </div>
             <div class="faq__item">
-              <div class="faq__question" onclick="toggleClass()">
+              <div class="faq__question">
                 <h5>When can I return my rental?</h5>
                 <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
               </div>
@@ -553,7 +662,7 @@
               </div>
             </div>
             <div class="faq__item">
-              <div class="faq__question" onclick="toggleClass()">
+              <div class="faq__question">
                 <h5>Can I leave California?</h5>
                 <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
               </div>
