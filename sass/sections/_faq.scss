@@ -24,14 +24,28 @@
   align-items: center;
   gap: 20px;
   cursor: pointer;
+
+  & img {
+    transition: 300ms;
+  }
 }
 
 .faq__answer {
-  margin-top: 20px;
-
+  max-height: 0;
   padding-right: 36px;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 20px;
+  transition: 300ms;
+}
 
-  font-size: 18px;
-  line-height: 25px;
-  transition: all 0.3s;
+.faq__item.active {
+  & .faq__answer {
+    margin-top: 20px;
+    max-height: 1000px;
+  }
+
+  & img {
+    transform: rotate(90deg);
+  }
 }

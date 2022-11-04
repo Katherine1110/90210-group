@@ -170,7 +170,7 @@
                   </div>
 
                   <div class="form__input">
-                    <label for="email">Phone number</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Your email" />
                   </div>
                 </div>
@@ -343,24 +343,24 @@
         </div>
       </section>
 
-      <section class="products">
+      <section class="products" data-filters>
         <div class="wrapper">
           <div class="products__header">
             <h4>choose your car</h4>
-            <div class="products__buttons active">
-              <div class="products__button products__button--reset hidden">
+            <div class="products__buttons">
+              <div data-type="reset" class="products__button products__button--reset hidden">
                 <img src="./images/icons/close.svg" alt="close button" />
                 reset filters
               </div>
               <div class="delimiter">
-                <div class="products__button active">by type</div>
-                <div class="products__button">by brand</div>
+                <div data-type="type" class="products__button active">by type</div>
+                <div data-type="brand" class="products__button">by brand</div>
               </div>
             </div>
           </div>
           <!-- cars type -->
           <div class="products__types">
-            <div class="product__type type">
+            <div data-type="type" class="product__type type">
               <div class="type__item">
                 <img src="./images/cars-types/Sedan.svg" alt="Sedan" />
                 <p>sedan</p>
@@ -386,7 +386,7 @@
                 <p>executive</p>
               </div>
             </div>
-            <div class="product__type product__type--brands hidden">
+            <div data-type="brand" class="product__type product__type--brands hidden">
               <div class="type__item product__option">
                 <img src="./images/cars-brands/Audi.svg" alt="" />
               </div>
@@ -615,20 +615,20 @@
 
       <!-- FAQ -->
 
-      <section class="faq">
+      <section class="faq" data-faq>
         <div class="wrapper">
           <h4>frequently asked questions</h4>
           <div class="faq__items">
             <div class="faq__item">
-              <div class="faq__question">
+              <div data-type="question" class="faq__question">
                 <h5>
                   I have car insurance that covers me for driving in other cars. Do I still need to
                   purchase your insurance policy?
                 </h5>
                 <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
               </div>
-              <div class="faq__answer hidden">
-                To make a reservation, click the reserve button underneath the picture of the
+              <div data-type="answer" class="faq__answer">
+                1To make a reservation, click the reserve button underneath the picture of the
                 vehicle that you wish to rent. This will take you to the reservation request page
                 that will ask for your contact and billing information and the dates that you wish
                 to reserve the vehicle. When you have completed this information, hit submit, and
@@ -636,12 +636,12 @@
               </div>
             </div>
             <div class="faq__item">
-              <div class="faq__question">
+              <div data-type="question" class="faq__question">
                 <h5>How do I make a reservation?</h5>
                 <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
               </div>
-              <div class="faq__answer hidden">
-                To make a reservation, click the reserve button underneath the picture of the
+              <div data-type="answer" class="faq__answer">
+                2To make a reservation, click the reserve button underneath the picture of the
                 vehicle that you wish to rent. This will take you to the reservation request page
                 that will ask for your contact and billing information and the dates that you wish
                 to reserve the vehicle. When you have completed this information, hit submit, and
@@ -649,12 +649,12 @@
               </div>
             </div>
             <div class="faq__item">
-              <div class="faq__question">
+              <div data-type="question" class="faq__question">
                 <h5>When can I return my rental?</h5>
                 <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
               </div>
-              <div class="faq__answer hidden">
-                To make a reservation, click the reserve button underneath the picture of the
+              <div data-type="answer" class="faq__answer">
+                3To make a reservation, click the reserve button underneath the picture of the
                 vehicle that you wish to rent. This will take you to the reservation request page
                 that will ask for your contact and billing information and the dates that you wish
                 to reserve the vehicle. When you have completed this information, hit submit, and
@@ -662,12 +662,12 @@
               </div>
             </div>
             <div class="faq__item">
-              <div class="faq__question">
+              <div data-type="question" class="faq__question">
                 <h5>Can I leave California?</h5>
                 <img src="./images/icons/arrow-down.svg" alt="arrow-down" />
               </div>
-              <div class="faq__answer hidden">
-                To make a reservation, click the reserve button underneath the picture of the
+              <div data-type="answer" class="faq__answer">
+                4To make a reservation, click the reserve button underneath the picture of the
                 vehicle that you wish to rent. This will take you to the reservation request page
                 that will ask for your contact and billing information and the dates that you wish
                 to reserve the vehicle. When you have completed this information, hit submit, and
@@ -702,7 +702,36 @@
                 <div class="form__wrapper">
                   <h4 class="form__title">Contact us</h4>
 
-                  <div class="form__inputs">
+                  <div class="form__row">
+                    <div class="form__input">
+                      <label for="first_name">Name</label>
+                      <input
+                        type="text"
+                        id="first_name"
+                        name="first_name"
+                        placeholder="Your first name"
+                      />
+                    </div>
+
+                    <div class="form__input">
+                      <label for="phone">Mobile</label>
+                      <input type="tel" id="phone" name="phone" placeholder="(999) 999-9999" />
+                    </div>
+                  </div>
+
+                  <div class="form__row">
+                    <div class="form__input">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Your email" />
+                    </div>
+
+                    <button type="submit">
+                      send
+                      <img src="./images/footer/send_arrow.svg" alt="" srcset="" />
+                    </button>
+                  </div>
+
+                  <!-- <div class="form__inputs">
                     <div class="form__item">
                       <label for="name">name</label>
                       <input type="text" name="name" id="name" />
@@ -724,7 +753,7 @@
                         <img src="./images/footer/send_arrow.svg" alt="" />
                       </button>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </form>
             </div>
@@ -747,13 +776,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="./js/toggler.js"></script>
-    <script>
+    <!-- <script>
       const toggleClass = () => {
         const toggler = document.querySelector('.faq__question');
         toggler.classList.toggle('toggle');
         const answer = document.querySelector('.faq__answer');
         answer.classList.toggle('hidden');
       };
-    </script>
+    </script> -->
   </body>
 </html>
