@@ -11,7 +11,6 @@ const productsTypes = document.querySelectorAll('.products__types [data-type]');
 const faq = document.querySelectorAll('.faq__item');
 const answer = document.querySelectorAll('.faq__answer');
 
-console.log(answer);
 function toggleActiveType() {
   bookingTypes.forEach((type) => {
     type.addEventListener('click', (e) => {
@@ -72,21 +71,6 @@ function filters() {
 }
 
 filters();
-
-// function toggleAnswers() {
-//   faq.forEach((item) => {
-//     item.addEventListener('click', (e) => {
-//       e.currentTarget.classList.toggle('active');
-//       answer.forEach((item) => {
-//         if (item.closest('.active') !== null) {
-//           item.classList.remove('hidden');
-//         } else {
-//           item.classList.add('hidden');
-//         }
-//       });
-//     });
-//   });
-// }
 
 function toggleAnswers() {
   document.querySelectorAll('.faq__item').forEach((item) => {

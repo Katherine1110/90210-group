@@ -889,6 +889,12 @@ h5 {
   overflow: auto;
 }
 
+.villas .product__type {
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+}
+
 .product__type {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -919,8 +925,8 @@ h5 {
       flex-shrink: 0;
   cursor: pointer;
   opacity: 0.5;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .type__item img {
@@ -1115,6 +1121,115 @@ h5 {
   border-top: 1px solid #999999;
 }
 
+.footer .form {
+  margin-top: 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.footer .form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+  margin: 0;
+}
+
+.footer .form__wrapper .form__row {
+  gap: 30px;
+}
+
+.footer .form__wrapper .form__row .form__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.footer .form__wrapper .form__row .form__input label {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.footer .form__wrapper .form__row .form__input label:hover, .footer .form__wrapper .form__row .form__input label:focus {
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer .form__wrapper .form__row .form__input input {
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding-bottom: 10px;
+  margin: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  width: 100%;
+}
+
+.footer .form__wrapper .form__row .form__input input:hover, .footer .form__wrapper .form__row .form__input input:focus {
+  border-bottom: 1px solid #fff;
+  cursor: text;
+}
+
+.footer .form__wrapper .form__row button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  border: none;
+  color: #999;
+  text-transform: uppercase;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.footer .form__wrapper .form__row button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.footer__link a {
+  color: #999;
+}
+
 .faq {
   max-width: 1200px;
   margin-left: auto;
@@ -1164,8 +1279,8 @@ h5 {
   max-height: 0;
   padding-right: 36px;
   overflow: hidden;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 30px;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -1178,89 +1293,6 @@ h5 {
 .faq__item.active img {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-}
-
-.booking {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  position: fixed;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.booking.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  pointer-events: auto;
-}
-
-.booking.active .modal__background {
-  pointer-events: auto;
-  opacity: 1;
-  z-index: -1;
-}
-
-.booking.active .modal__wrapper {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.modal__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-}
-
-.modal__wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  overflow: auto;
-  width: 100%;
-  max-width: 840px;
-  height: 100%;
-  padding: 50px;
-  background: #fff;
-}
-
-.modal__wrapper img {
-  display: block;
-  margin-left: auto;
-  cursor: pointer;
-}
-
-.booking__types {
-  margin-top: 30px;
-  margin-bottom: 60px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.booking__types .products__button {
-  font-size: 16px;
-  line-height: 20px;
-  text-align: right;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.booking__types .products__button:hover {
-  font-weight: 600;
-}
-
-.booking__types .products__button.active {
-  font-weight: 600;
 }
 
 .form {
@@ -1358,5 +1390,88 @@ label[for='checkbox'] {
 .form__button:hover {
   background: #000000;
   color: #fff;
+}
+
+.booking {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.booking.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  pointer-events: auto;
+}
+
+.booking.active .modal__background {
+  pointer-events: auto;
+  opacity: 1;
+  z-index: -1;
+}
+
+.booking.active .modal__wrapper {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.modal__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.modal__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: auto;
+  width: 100%;
+  max-width: 840px;
+  height: 100%;
+  padding: 50px;
+  background: #fff;
+}
+
+.modal__wrapper img {
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.booking__types {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.booking__types .products__button {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.booking__types .products__button:hover {
+  font-weight: 600;
+}
+
+.booking__types .products__button.active {
+  font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map */
